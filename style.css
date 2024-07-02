@@ -1,0 +1,173 @@
+@font-face {
+    font-family: 'TT Lakes Regular';
+    src: url('fonts/TTLakes-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Medium';
+    src: url('fonts/TTLakes-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Light';
+    src: url('fonts/TTLakes-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Bold';
+    src: url('fonts/TTLakes-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --swiper-theme-color: #B5B6BC;
+
+}
+
+.services {
+    border-top: 1px solid #D9FFF5;
+}
+
+.services__title {
+    font-family: 'TT Lakes Light';
+    color: #7E7E82;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin: 16px 0 40px 16px;
+}
+
+.swiper-container {
+    height: 130px;
+}
+
+.swiper-slide {
+    margin-left: 16px;
+}
+
+.services__list {
+    display: none;
+}
+
+.button-read-more {
+    font-family: 'TT Lakes Medium';
+    color: #1B1C21;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    background-color: transparent;
+    border: none;
+    margin-left: 48px;
+    position: relative;
+    display: none;
+}
+
+.button-read-more::before {
+    content: url(images/icons/icon_reed_more.svg);
+    position: absolute;
+    left: -15px;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .swiper-container.swiper {
+        display: none;
+    }
+
+    .services__title {
+        margin-left: 24px;
+    }
+
+    .services__list {
+        padding: 0;
+        margin: 0 24px 24px 24px;
+        list-style: none;
+        display: flex;
+        max-width: 1120px;
+        flex-wrap: wrap;
+        gap: 16px 24px;
+    }
+
+    .services__link-item {
+        width: 224px;
+        height: 72px;
+        box-sizing: border-box;
+        border: 1px solid #EAEAEA;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .circle-img {
+        display: block;
+        box-sizing: border-box;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #FF3E79;
+        border-radius: 50%;
+        position: relative;
+        margin-right: 18px;
+    }
+
+    .circle-img::after {
+        content: "";
+        width: 2px;
+        height: 8px;
+        background-color: #FF3E79;
+        position: absolute;
+        top: 17px;
+        left: 50%;
+        transform: rotate(45deg)
+    }
+
+    .circle-img::before {
+        content: "";
+        width: 2px;
+        height: 8px;
+        background-color: #FF3E79;
+        position: absolute;
+        top: 12px;
+        left: 50%;
+        transform: rotate(-45deg)
+    }
+
+    .services__brand {
+        margin-left: 18px;
+    }
+
+    .services__list-item:nth-last-child(-n+5) {
+        display: none;
+    }
+
+    .button-read-more {
+        display: block;
+    }
+
+}
+
+@media (min-width: 1120px) {
+    .services__title {
+        margin-left: 32px;
+    }
+    
+    .services__list {
+        margin: 0 36px 36px 36px;
+    }
+
+    .services__link-item {
+        width: 240px;
+    }
+
+    .services__list-item:nth-last-child(-n+5) {
+        display: flex;
+    }
+}
